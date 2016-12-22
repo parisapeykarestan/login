@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+  <style>
+  .article
+  {
+      margin:20px;
+      padding:20px;
+      border: 5px double;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      box-shadow: #800F25 ;
+
+  }
+
+ body
+ {
+     background-color: #3BCCBE;
+     text-align: center;
+ }
+
+  .validated:invalid
+  {
+      background-color: rgba( #CC6DB3);
+      border: 1px solid;
+      border-radius: 5px;
+      box-shadow: #808080 ;
+      font-style: italic;
+      width: 140px;
+      height: 20px;
+
+  }
+  .validated:valid
+  {
+     background-color: rgba(255, 255, 258, 1);
+
+  }
+
+  </style>
+</head>
+
+<body>
+<form action="check.php" method="post">
+<div class="article">
+    <label for="txtUser">UserName:</label>
+    <input class="validated" type="text" id="txtUser"
+    name="txtUser" required autofocus pattern=".{4,10}" />
+</div>
+<div>
+<label for="txtPass">PassWord:</label>
+<input type="password" id="txtPass" name="txtPass" required  />
+</div>
+<div>
+<input type="submit" value="log in"/>
+</div>
+</form>
+</body>
+
+</html>
